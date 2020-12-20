@@ -1,0 +1,3 @@
+﻿CREATE USER [Osman.Ciftci@shell.com] FOR EXTERNAL PROVIDER
+    WITH DEFAULT_SCHEMA = [USERS];
+

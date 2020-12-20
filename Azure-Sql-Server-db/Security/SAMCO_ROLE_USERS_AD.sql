@@ -1,0 +1,31 @@
+﻿CREATE ROLE [SAMCO_ROLE_USERS_AD]
+    AUTHORIZATION [db_owner];
+
+
+GO
+ALTER ROLE [SAMCO_ROLE_USERS_AD] ADD MEMBER [Duncan.Bain@shell.com];
+
+
+GO
+ALTER ROLE [SAMCO_ROLE_USERS_AD] ADD MEMBER [Freek.dePoel@shell.com];
+
+
+GO
+ALTER ROLE [SAMCO_ROLE_USERS_AD] ADD MEMBER [Marlon.Hernandez@shell.com];
+
+
+GO
+ALTER ROLE [SAMCO_ROLE_USERS_AD] ADD MEMBER [Otto.Soede@shell.com];
+
+
+GO
+ALTER ROLE [SAMCO_ROLE_USERS_AD] ADD MEMBER [Simhadri.Saripalli@shell.com];
+
+
+GO
+ALTER ROLE [SAMCO_ROLE_USERS_AD] ADD MEMBER [foo];
+
+
+GO
+ALTER ROLE [SAMCO_ROLE_USERS_AD] ADD MEMBER [Surbhi.Sindhal@shell.com];
+

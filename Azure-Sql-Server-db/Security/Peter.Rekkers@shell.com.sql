@@ -1,0 +1,3 @@
+﻿CREATE USER [Peter.Rekkers@shell.com] FOR EXTERNAL PROVIDER
+    WITH DEFAULT_SCHEMA = [USERS];
+

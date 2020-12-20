@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Azure_Sql_Server_db</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{a6812be6-a72c-40b1-86f0-d0e71b8f7360}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Azure_Sql_Server_db</RootNamespace>
+    <AssemblyName>Azure_Sql_Server_db</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="SAMCO\" />
+    <Folder Include="SAMCO\Tables\" />
+    <Folder Include="SAMCO_FI\" />
+    <Folder Include="SAMCO_FI\Views\" />
+    <Folder Include="SAMCO_TT\" />
+    <Folder Include="SAMCO_TT\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="SAMCO\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="SAMCO\Tables\BB_SEC.sql" />
+    <Build Include="SAMCO\Tables\BB_SEC_Journal.sql" />
+    <Build Include="SAMCO\Tables\BB_SEC_Staging.sql" />
+    <Build Include="SAMCO\Tables\BBAIM_AUDITFEED.sql" />
+    <Build Include="SAMCO\Tables\BESTX_TRADE_REPORT.sql" />
+    <Build Include="SAMCO\Tables\BROKER.sql" />
+    <Build Include="SAMCO\Tables\CURRENCY_PAIR.sql" />
+    <Build Include="SAMCO\Tables\FXALL_TRADEDATA_ALLOCATIONS.sql" />
+    <Build Include="SAMCO\Tables\FXALL_TRADEDATA_COMPETINGQUOTES.sql" />
+    <Build Include="SAMCO\Tables\FXGO_TRADEDATA_ALLOCATIONS.sql" />
+    <Build Include="SAMCO\Tables\FXGO_TRADEDATA_COMPETINGQUOTES.sql" />
+    <Build Include="SAMCO\Tables\SCD_FXTRANSACTIONDATA.sql" />
+    <Build Include="SAMCO\Tables\TestJson.sql" />
+    <Build Include="SAMCO_FI\Views\VW_BB_SEC_LAST.sql" />
+    <Build Include="SAMCO_TT\Views\VW_BBAIM_AUDITFEED.sql" />
+    <Build Include="SAMCO_TT\Views\VW_BESTX_TRADE_REPORT.sql" />
+    <Build Include="SAMCO_TT\Views\VW_BROKER.sql" />
+    <Build Include="SAMCO_TT\Views\VW_CURRENCY_PAIR.sql" />
+    <Build Include="SAMCO_TT\Views\VW_FXALL_TRADEDATA_ALLOCATIONS.sql" />
+    <Build Include="SAMCO_TT\Views\VW_FXALL_TRADEDATA_COMPETINGQUOTES.sql" />
+    <Build Include="SAMCO_TT\Views\VW_FXGO_TRADEDATA_ALLOCATIONS.sql" />
+    <Build Include="SAMCO_TT\Views\VW_FXGO_TRADEDATA_COMPETINGQUOTES.sql" />
+    <Build Include="SAMCO_TT\Views\VW_ORDER_ALLOCATION.sql" />
+    <Build Include="SAMCO_TT\Views\VW_SCD_FXTRANSACTIONDATA.sql" />
+    <Build Include="Security\SAMCO_ROLE_USERS_AD.sql" />
+    <Build Include="Security\SAMCO_ROLE_USERS_AI.sql" />
+    <Build Include="Security\SAMCO_ROLE_USERS_ALL.sql" />
+    <Build Include="Security\SAMCO_ROLE_USERS_AS.sql" />
+    <Build Include="Security\SAMCO_ROLE_USERS_EQ.sql" />
+    <Build Include="Security\SAMCO_ROLE_USERS_FI.sql" />
+    <Build Include="Security\SAMCO_ROLE_USERS_TT.sql" />
+    <Build Include="Security\Ben.reterink%40shell.com.sql" />
+    <Build Include="Security\bronka.rzepkowski%40shell.com.sql" />
+    <Build Include="Security\Duncan.Bain%40shell.com.sql" />
+    <Build Include="Security\eugene.gullit%40shell.com.sql" />
+    <Build Include="Security\foo.sql" />
+    <Build Include="Security\frank.hannewijk%40shell.com.sql" />
+    <Build Include="Security\Freek.dePoel%40shell.com.sql" />
+    <Build Include="Security\j.kok%40shell.com.sql" />
+    <Build Include="Security\Jay.J.Shetty%40shell.com.sql" />
+    <Build Include="Security\K.Bhattacharjee%40shell.com.sql" />
+    <Build Include="Security\l.vanderlinden%40shell.com.sql" />
+    <Build Include="Security\Marlon.Hernandez%40shell.com.sql" />
+    <Build Include="Security\Mathijs.Tijmons%40shell.com.sql" />
+    <Build Include="Security\nathan.devries%40shell.com.sql" />
+    <Build Include="Security\Olivier.Wolthoorn%40shell.com.sql" />
+    <Build Include="Security\Osman.Ciftci%40shell.com.sql" />
+    <Build Include="Security\Otto.Soede%40shell.com.sql" />
+    <Build Include="Security\Peter.Rekkers%40shell.com.sql" />
+    <Build Include="Security\Ralf.vanBaast%40shell.com.sql" />
+    <Build Include="Security\Raymond.Wolswijk%40shell.com.sql" />
+    <Build Include="Security\Ruben.VandenHeuvel%40shell.com.sql" />
+    <Build Include="Security\Ruben.vanLierop%40shell.com.sql" />
+    <Build Include="Security\Sem.Kippers%40shell.com.sql" />
+    <Build Include="Security\shell-02-eun-adf-driqqztcgzwkascsrff.sql" />
+    <Build Include="Security\shell-02-eun-adf-nxfgwlxfkmpsehsjsaf.sql" />
+    <Build Include="Security\Simhadri.Saripalli%40shell.com.sql" />
+    <Build Include="Security\Surbhi.Sindhal%40shell.com.sql" />
+    <Build Include="Security\Valeriy.Chernyy%40shell.com.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="SAMCO\Stored Procedures\DELETE_COMBINEDTRADEDATA.sql" />
+    <Build Include="SAMCO\Stored Procedures\sp_MergeBBSEC.sql" />
+    <Build Include="SAMCO\Stored Procedures\sp_TruncateBBSEC.sql" />
+    <Build Include="Security\SAMCO.sql" />
+    <Build Include="Security\SAMCO_AI.sql" />
+    <Build Include="Security\SAMCO_EQ.sql" />
+    <Build Include="Security\SAMCO_FI.sql" />
+    <Build Include="Security\SAMCO_TT.sql" />
+    <Build Include="Security\TT_ANALYTICS.sql" />
+    <Build Include="Security\USERS.sql" />
+  </ItemGroup>
+</Project>

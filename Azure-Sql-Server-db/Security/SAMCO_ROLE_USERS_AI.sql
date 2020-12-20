@@ -1,0 +1,7 @@
+﻿CREATE ROLE [SAMCO_ROLE_USERS_AI]
+    AUTHORIZATION [db_owner];
+
+
+GO
+ALTER ROLE [SAMCO_ROLE_USERS_AI] ADD MEMBER [bronka.rzepkowski@shell.com];
+

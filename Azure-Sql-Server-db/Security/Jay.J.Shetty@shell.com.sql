@@ -1,0 +1,3 @@
+﻿CREATE USER [Jay.J.Shetty@shell.com] FOR EXTERNAL PROVIDER
+    WITH DEFAULT_SCHEMA = [USERS];
+

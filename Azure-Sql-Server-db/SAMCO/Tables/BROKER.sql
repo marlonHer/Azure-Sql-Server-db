@@ -1,0 +1,7 @@
+﻿CREATE TABLE [SAMCO].[BROKER] (
+    [Broker] VARCHAR (100) NULL,
+    [DIM]    VARCHAR (100) NULL,
+    [Fxall]  VARCHAR (100) NULL,
+    [TCA]    VARCHAR (100) NULL
+);
+

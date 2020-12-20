@@ -1,0 +1,3 @@
+﻿CREATE USER [Ben.reterink@shell.com] FOR EXTERNAL PROVIDER
+    WITH DEFAULT_SCHEMA = [USERS];
+

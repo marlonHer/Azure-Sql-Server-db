@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [SAMCO_FI]
+    AUTHORIZATION [db_owner];
+

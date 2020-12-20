@@ -1,0 +1,3 @@
+﻿CREATE ROLE [SAMCO_ROLE_USERS_EQ]
+    AUTHORIZATION [db_owner];
+

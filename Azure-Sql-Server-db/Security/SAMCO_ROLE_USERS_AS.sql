@@ -1,0 +1,11 @@
+﻿CREATE ROLE [SAMCO_ROLE_USERS_AS]
+    AUTHORIZATION [db_owner];
+
+
+GO
+ALTER ROLE [SAMCO_ROLE_USERS_AS] ADD MEMBER [Peter.Rekkers@shell.com];
+
+
+GO
+ALTER ROLE [SAMCO_ROLE_USERS_AS] ADD MEMBER [l.vanderlinden@shell.com];
+

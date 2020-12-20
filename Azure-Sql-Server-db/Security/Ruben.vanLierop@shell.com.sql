@@ -1,0 +1,3 @@
+﻿CREATE USER [Ruben.vanLierop@shell.com] FOR EXTERNAL PROVIDER
+    WITH DEFAULT_SCHEMA = [USERS];
+
