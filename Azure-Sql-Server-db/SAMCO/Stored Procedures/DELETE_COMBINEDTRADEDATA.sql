@@ -1,5 +1,6 @@
 ﻿-- Create the stored procedure in the specified schema
 CREATE PROCEDURE SAMCO.DELETE_COMBINEDTRADEDATA
+    -- test aanpassing 
     @table_name varchar(100),
     @col_name  varchar(100)
  
